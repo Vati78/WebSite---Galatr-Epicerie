@@ -1,0 +1,273 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    font-size: 20px;
+    border-left: 3px;
+    border-left-color: #454AAC;
+    border-left-style: solid;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    justify-content: center;
+
+}
+
+nav div[class="pc"] {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color:#454AAC;
+}
+
+
+header, footer {
+    background-color: #FFFFFF;
+    background-size: cover;
+}
+
+main {
+    background-image: url(images/Bg-image2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border-top: solid #FFFFFF;
+}
+
+main section{
+    background-color: #454AAC;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    row-gap: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-auto-rows: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.grid div {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 3%;
+    text-align: justify;
+}
+
+.no-underline {
+    text-shadow: 5px 5px #00000025;
+}
+
+.section-1 {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    background-color: #ead6cd;
+}
+
+.section-2 {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+    background-color: #E7C0B5;
+}
+
+.section-3 {
+    grid-column: 3 / 11;
+    grid-row: 3 / 4;
+    background-color: #e5af9c;
+}
+
+h1 {
+    font-family: "Rouge Script", cursive;
+    font-size: 60px;
+}
+
+h1, header {
+    text-align: center;
+}
+
+em {
+    font-weight: 800;
+    color:rgb(215, 65, 192)
+}
+
+.lien {
+    border-radius: 4px;
+    background-color: rgb(215, 65, 192);
+    text-decoration: none;
+    color: #454AAC;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    display: block;
+    width: fit-content;
+    border-style: solid;
+    border-color: #454AAC;
+}
+
+.lien:hover{
+    background-color: #454AAC;
+    color: rgb(215, 65, 192);
+    border-color: rgb(215, 65, 192);
+}
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.no-underline {
+    text-decoration: none;
+    color:black;
+}
+
+.header {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+
+.main {
+    background-attachment: fixed;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+    border: solid;
+    background: linear-gradient(to left, rgb(224, 137, 211), rgb(215, 65, 192));
+    border-radius: 20px 20px 20px 20px ;
+}
+
+
+.logo img[class="twitter"]:hover {
+    content: url(images/twitter_b.png);
+}
+
+.logo img[class="insta"]:hover {
+    content: url(images/instagram_b.png);
+}
+
+.logo img[class="youtube"]:hover {
+    content: url(images/youtube_b.png);
+}
+
+.produits img{
+    max-width: 95%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+}
+
+form {
+    align-items: end;
+}
+
+iframe {
+    margin: 0 15% 0 15%;
+    width: 70%;
+    min-height: 150px;
+}
+
+audio {
+    margin: 10px 30% 10px 30%;
+    width: 40%;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#menu-toggle:checked + label + .menu-mobile {
+    display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        border-left: 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .conteneur {
+        display: flex;
+    }
+
+    .conteneur div{
+        margin: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .pc *{
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        margin: 5%;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid div {
+        margin: 5px 0 5px 0;
+    }
+
+    iframe {
+        margin: 0;
+        width: 100%;
+        min-height: 150px;
+    }
+}
+
+
